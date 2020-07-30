@@ -48,6 +48,7 @@ export default class ExerciseList extends React.Component{
         return(
             <div className="container">
               <h3>Logged Exercise</h3>
+              <div className="table-responsive-md">
               <table className="table">
                 <thead className="thead-light">
                   <tr>
@@ -62,6 +63,7 @@ export default class ExerciseList extends React.Component{
                   {this.exerciseList()}
                 </tbody>
               </table>
+              </div>
             </div>
         )
     }
