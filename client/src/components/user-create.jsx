@@ -12,7 +12,8 @@ export default class UserCreate extends React.Component{
     }
     onChangeusername(e){
         this.setState({
-                username: e.target.value
+                username: e.target.value,
+                user_log: ''
             });
     }
     onSubmit(e){
@@ -23,7 +24,10 @@ export default class UserCreate extends React.Component{
         console.log(user);
         //sending my data to the backend API
         axios.post('/user/add/', this.state)
-            .then(res => console.log(res.data))
+            .then(res => {
+                console.log(res.data)
+                this.setState({user_log: 'User Create Successfully!'})
+            })
             .catch(err => console.log(err))
         //after submitting the form will become empty
         this.setState({
@@ -48,6 +52,9 @@ export default class UserCreate extends React.Component{
                     <input type="submit" value="Create User" className="btn btn-primary"/>
                   </div>
                 </form>
+                <div className="container">
+                    <p>{this.state.user_log}</p>
+                </div>
             </div>
         )
     }
