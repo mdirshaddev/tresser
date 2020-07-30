@@ -22,7 +22,7 @@ export default class CreateExercise extends React.Component{
         }
     }
     componentDidMount(){
-        axios.get('http://localhost:4000/exercise/'+this.props.match.params.id)
+        axios.get('https://mernapptodo.herokuapp.com/exercise/'+this.props.match.params.id)
           .then(res => {
             this.setState({
               username: res.data.username,
@@ -33,7 +33,7 @@ export default class CreateExercise extends React.Component{
           })
           .catch(err=>console.log(err))
 
-        axios.get('http://localhost:4000/user/')
+        axios.get('https://mernapptodo.herokuapp.com/user/')
           .then(res=>{
             if (res.data.length>0){
               this.setState({
@@ -73,7 +73,7 @@ export default class CreateExercise extends React.Component{
         }
         console.log(exercise);
         //sending the data to backend API
-        axios.post('http://localhost:4000/exercise/update/'+this.props.match.params.id, exercise)
+        axios.post('https://mernapptodo.herokuapp.com/exercise/update/'+this.props.match.params.id, exercise)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
         window.location='/';

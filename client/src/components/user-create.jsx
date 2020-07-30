@@ -22,7 +22,7 @@ export default class UserCreate extends React.Component{
         };
         console.log(user);
         //sending my data to the backend API
-        axios.post('http://localhost:4000/user/add/', this.state)
+        axios.post('https://mernapptodo.herokuapp.com/user/add/', this.state)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
         //after submitting the form will become empty
