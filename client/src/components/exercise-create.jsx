@@ -52,13 +52,13 @@ export default class CreateExercise extends React.Component{
         }
         console.log(exercise);
         //sending the data to backend API
-        axios.post('https://mernapptodo.herokuapp.com/exercise/add/', this.state)
+        axios.post('/exercise/add/', this.state)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
         window.location='/';
     }
     componentDidMount(){
-        axios.get('https://mernapptodo.herokuapp.com/user/')
+        axios.get('/user/')
           .then(res=>{
             if (res.data.length>0){
               this.setState({

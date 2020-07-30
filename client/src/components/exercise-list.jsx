@@ -24,14 +24,14 @@ export default class ExerciseList extends React.Component{
         }
     }
     componentDidMount(){
-        axios.get('https://mernapptodo.herokuapp.com/exercise/')
+        axios.get('/exercise/')
             .then(res=>{
                 this.setState({ exercises: res.data });
             })
             .catch(err=>console.log(err))
     }
     deleteExercise(id){
-      axios.delete('https://mernapptodo.herokuapp.com/exercise/'+id)
+      axios.delete('/exercise/'+id)
         .then(res=> console.log(res.data))
         .catch(err=> console.log(err))
       this.setState({
