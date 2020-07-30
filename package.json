@@ -1,0 +1,29 @@
+{
+  "name": "heroku-mern-todo",
+  "version": "1.0.0",
+  "description": "This project is just a clone of freeCodeCamp tutorial of ToDo App",
+  "main": "server.js",
+  "scripts": {
+    "test": "node test.js",
+    "build": "cd client && npm run build",
+    "start": "node server.js",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "dev-start": "nodemon server.js",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mern-todoApp"
+  },
+  "author": "Md Irshad",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.26",
+    "nodemon": "^2.0.4"
+  }
+}
