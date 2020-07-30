@@ -5,7 +5,7 @@ export default class NavBar extends React.Component{
     render(){
         return(
             <div className="container">
-              <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+              <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
                   <Link to="/" className="navbar-brand">Exercise Tracker</Link>
                   <div className="collapse navbar-collapse">
                       <ul className="navbar-nav mr-auto">

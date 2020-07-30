@@ -47,8 +47,8 @@ export default class ExerciseList extends React.Component{
     render(){
         return(
             <div className="container">
-              <h3>Logged Exercise</h3>
-              <div className="table-responsive-md">
+              <h3 className="text-center">Logged Exercise</h3>
+              <div className="table-responsive-sm">
               <table className="table">
                 <thead className="thead-light">
                   <tr>
