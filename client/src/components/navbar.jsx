@@ -22,7 +22,7 @@ class Nav extends Component {
         <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary transparent-nav">
           <div className="container">
-            <a className="navbar-brand" href="#">Rate My Neighborhood</a>
+            <a className="navbar-brand" href="#">To Do App</a>
             <button onClick={this.toggleNavbar} className={`${classTwo}`} type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
             </button>
