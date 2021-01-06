@@ -19,7 +19,7 @@
   "author": "Md Irshad",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bl": "^4.0.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
